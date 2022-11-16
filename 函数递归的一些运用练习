@@ -1,0 +1,17 @@
+#include<stdio.h>
+int i(char* str)
+{
+	if (*str != '\0')
+		return 1 + i(str + 1);
+	else
+		return 0;
+}
+int main()
+{
+	char arr[] = "hello";
+	int k = i(arr);
+	printf("k= %d\n", k);
+	return 0;
+}//使用递归计算字符长度
+
+
