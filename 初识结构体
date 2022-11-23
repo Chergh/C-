@@ -1,0 +1,29 @@
+#include<stdio.h>
+	typedef struct stu
+	{
+		short age;
+		char name[20];
+		char tele[20];
+		char sex[20];
+	}stu;
+	void print1(stu s)
+	{
+		printf("age= %d\n", s.age);
+		printf("name= %s\n", s.name);
+		printf("tele= %s\n", s.tele);
+		printf("sex= %s\n", s.sex);
+	}
+	void print2(stu* ps)
+	{
+		printf("age= %d\n", ps->age);
+		printf("name= %s\n", ps->name);
+		printf("tele= %s\n", ps->tele);
+		printf("sex= %s\n", ps->sex);
+	}
+	int main()
+	{
+		stu s = { 18,"chergh","1003440900","男" };
+		print1(s);
+		print2(&s);
+		return 0;
+	}
